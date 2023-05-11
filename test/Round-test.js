@@ -32,7 +32,6 @@ describe('takeTurn', function() {
     });
 
     it('should properly track the number of incorrect guesses', function() {
-        console.log(round.incorrectGuesses)
         expect(round.incorrectGuesses.length).to.equal(1);
     });
 
