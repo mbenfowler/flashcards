@@ -1,4 +1,4 @@
-function createRound(deck) {
+const createRound = (deck) => {
     return {
         deck,
         currentCard: deck[0],
@@ -8,7 +8,7 @@ function createRound(deck) {
     };
 }
 
-function takeTurn(guess, round) {
+const takeTurn = (guess, round) => {
     round.turns++;
     let feedback = 'correct!';
     if (guess !== round.currentCard.correctAnswer) {
@@ -24,17 +24,17 @@ function takeTurn(guess, round) {
     return feedback;
 }
 
-function calculatePercentCorrect(round) {
+const calculatePercentCorrect = (round) => {
     return round.incorrectGuesses.length / round.turns * 100;
 }
 
-function endRound(round) {
+const endRound = (round) => {
     if (round.turns === round.deck.length) {
         return `** Round over! ** You answered ${round.deck.length - round.incorrectGuesses.length} of the questions correctly!`;
     }
 }
 
-function getTimeElapsed(round) {
+const getTimeElapsed = (round) => {
     let timeElapsedInSeconds = Math.floor((Date.now() - round.startTime) / 1000);
     return `Your round took ${timeElapsedInSeconds} seconds to complete`;
 }
