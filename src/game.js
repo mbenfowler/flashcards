@@ -14,7 +14,7 @@ function printQuestion(round) {
   util.main(round);
 }
 
-function start() {
+const start = () => {
   let cards = prototypeQuestions.map(question => createCard(question.id, question.question, question.answers, question.correctAnswer));
   let deck = createDeck(...cards);
   let round = createRound(deck);

@@ -1,8 +1,8 @@
-function createDeck(...cards) {
+const createDeck = (...cards) => {
     return cards;
 }
 
-function countCards(deck) {
+const countCards = (deck) => {
     return deck.length;
 }
 

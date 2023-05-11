@@ -1,4 +1,4 @@
-function createCard(id, question, answers, correctAnswer) {
+const createCard = (id, question, answers, correctAnswer) => {
     return {
         id,
         question,
